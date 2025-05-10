@@ -4,14 +4,14 @@ public class Employee{
     protected int employeeId;
     private static int num = 1; //Counter for Employee code, making sure we will never have duplicates, starting from 1
      
-    //Counstuctor
+    //Constuctor
     public Employee(String name){
         this.name = name;
         this.employeeId = num++;
     }
     //Empty constructor
     public Employee(){
-        this.name = null;
+        this.name = "";
         this.employeeId = num++;
     }
 
@@ -31,7 +31,7 @@ public class Employee{
 
     @Override
     public String toString() {
-        return "Employee [name=" + name + ", num=" + num + "]";
+        return "Employee [name=" + name + ", employeeId=" + employeeId + "]";
     }
     
 }

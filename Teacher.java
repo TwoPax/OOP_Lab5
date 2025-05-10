@@ -10,7 +10,7 @@ public class Teacher extends Employee implements SchoolsMethods{
     //Empty constructor
     public Teacher() {
         super();
-        this.type = null;
+        this.type = "";
     }
     //Getters and Setters
     public String getType() {
@@ -19,16 +19,15 @@ public class Teacher extends Employee implements SchoolsMethods{
     public void setType(String type) {
         this.type = type;
     }
-
     @Override
     public String toString() {
-        return "Teacher [name=" + name + ", type=" + type + ", num=" + employeeId + "]";
+        return "Teacher [name=" + name + ", employeeId=" + employeeId + ", type=" + type + "]";
     }
     /*
      * Implements SchoolMethhood
      * Returns true if teacher is senior and not a supervisor, false otherwise
      */
     public boolean getByType(){
-        return this.type.equals("Senior") && !(this instanceof Supervisor);
+        return "Senior".equals(this.type) && !(this instanceof Supervisor);
     }   
 }

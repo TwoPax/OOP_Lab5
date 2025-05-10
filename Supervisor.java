@@ -30,10 +30,11 @@ public class Supervisor extends Teacher{ // Already implements SchoolMethods in 
     public void setCurrent(int current) {
         this.current = current;
     }
+    
     @Override
     public String toString() {
-        return "Supervisor [name=" + name + ", type=" + type + ", employees=" + Arrays.toString(employees) + ", num="
-                + employeeId + ", current=" + current + "]";
+        return "Supervisor [name=" + name + ", employeeId=" + employeeId + ", type=" + type + ", employees="
+                + Arrays.toString(employees) + ", current=" + current + "]";
     }
     /*
      * Implements SchoolMethod

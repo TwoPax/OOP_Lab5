@@ -119,7 +119,7 @@ public class OurEmployees {
         }
         for(int i = 0; i< this.current; i++){
             if(this.employees[i] != null && this.employees[i].getEmployeeID() == employee.getEmployeeID()){
-                System.out.println("Employee already in our system");
+                System.out.println("Employee is already in our system");
                 return false;
             }
         }

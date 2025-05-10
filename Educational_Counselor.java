@@ -10,7 +10,7 @@ public class Educational_Counselor extends Employee implements SchoolsMethods{
     //Empty constructor
     public Educational_Counselor() {
         super();
-        this.specialization = null;
+        this.specialization = "";
     }
     //Getters and Setters
     public String getSpecialization() {
@@ -21,7 +21,8 @@ public class Educational_Counselor extends Employee implements SchoolsMethods{
     }
     @Override
     public String toString() {
-        return "Educational_Counselor [name=" + name + ", num=" + employeeId + ", specialization=" + specialization + "]";
+        return "Educational_Counselor [name=" + name + ", employeeId=" + employeeId + ", specialization="
+                + specialization + "]";
     }
     /*
      * Implements SchoolsMethod
