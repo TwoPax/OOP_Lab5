@@ -1,6 +1,6 @@
-public class Educational_Counselor extends Employee{
+public class Educational_Counselor extends Employee implements SchoolsMethods{
      
-    private String specialization;
+    private String specialization; //Can only get "General Counselor" or "Educational Counselor" or "Educational Team Counselor"
 
     //Constructor
     public Educational_Counselor(String name, String specialization) {
@@ -9,7 +9,8 @@ public class Educational_Counselor extends Employee{
     }
     //Empty constructor
     public Educational_Counselor() {
-        this.specialization = "";
+        super();
+        this.specialization = null;
     }
     //Getters and Setters
     public String getSpecialization() {
@@ -20,7 +21,14 @@ public class Educational_Counselor extends Employee{
     }
     @Override
     public String toString() {
-        return "Educational_Counselor [name=" + name + ", num=" + num + ", specialization=" + specialization + "]";
+        return "Educational_Counselor [name=" + name + ", num=" + employeeId + ", specialization=" + specialization + "]";
+    }
+    /*
+     * Implements SchoolsMethod
+     * Returns true if the specialization is Educational Counselor
+     */
+    public boolean getByType(){
+        return "Educational Counselor".equals(this.specialization);
     }
     
 

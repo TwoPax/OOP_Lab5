@@ -1,17 +1,18 @@
 public class Employee{
 
     protected String name;
-    protected int num = 0; //Counter for Employee code, making sure we will never have duplicates
+    protected int employeeId;
+    private static int num = 1; //Counter for Employee code, making sure we will never have duplicates, starting from 1
      
     //Counstuctor
     public Employee(String name){
         this.name = name;
-        this.num++;
+        this.employeeId = num++;
     }
     //Empty constructor
     public Employee(){
-        this.name = "";
-        this.num++;
+        this.name = null;
+        this.employeeId = num++;
     }
 
     // Getters and Setters
@@ -21,11 +22,11 @@ public class Employee{
     public void setName(String name) {
         this.name = name;
     }
-    public int getNum() {
-        return num;
+    public int getEmployeeID() {
+        return employeeId;
     }
-    public void setNum(int num) {
-        this.num = num;
+    public void setEmployeeID(int num) {
+        this.employeeId = num;
     }
 
     @Override
